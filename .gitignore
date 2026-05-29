@@ -30,8 +30,9 @@ env/
 .claude/
 
 # Demo paper corpus — copyrighted PDFs; kept untracked on this public repo.
-# Distribute to students through a private channel, not git.
-papers/
+# Folder structure and notes (README/summary) are tracked; PDFs are not.
+# Distribute the PDFs to students through a private channel, not git.
+papers/**/*.pdf
 
 # Participant roster (PII)
 Participants_AI Course.pdf
