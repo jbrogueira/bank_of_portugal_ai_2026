@@ -29,6 +29,13 @@ env/
 # Claude Code local state
 .claude/
 
+# Local copy of CLAUDE.md for other agent CLIs
+AGENTS.md
+
+# Session 2 replication demo — local clone of shade-econ/sequence-jacobian
+# (an external repo with its own .git; not part of this repo)
+replication/
+
 # Demo paper corpus — copyrighted PDFs; kept untracked on this public repo.
 # Folder structure and notes (README/summary) are tracked; PDFs are not.
 # Distribute the PDFs to students through a private channel, not git.
