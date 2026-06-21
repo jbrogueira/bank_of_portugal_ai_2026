@@ -10,6 +10,8 @@ slides/decks/*
 !slides/decks/session1.pdf
 !slides/decks/session2.md
 !slides/decks/session2.pdf
+!slides/decks/session3.md
+!slides/decks/session3.pdf
 slides/assets/*
 !slides/assets/.gitkeep
 !slides/assets/*.svg
