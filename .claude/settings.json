@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//tmp/**)",
+      "Read(//private/tmp/**)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Write(./data/processed/**)",
+      "Write(./code/**)"
+    ],
+    "deny": [
+      "WebSearch",
+      "WebFetch",
+      "mcp__google-scholar__*",
+      "mcp__semantic-scholar__*"
+    ]
+  }
+}

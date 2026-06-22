@@ -28,8 +28,9 @@ env/
 .vscode/
 .idea/
 
-# Claude Code local state
-.claude/
+# Claude Code local state (keep shared settings.json tracked)
+.claude/*
+!.claude/settings.json
 
 # Local copy of CLAUDE.md for other agent CLIs
 AGENTS.md
