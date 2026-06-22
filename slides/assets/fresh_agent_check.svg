@@ -1,0 +1,84 @@
+<svg viewBox="0 0 560 470" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .win   { font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; font-size: 12px; fill: #6b6a66; }
+      .who   { font-family: -apple-system, Inter, sans-serif; font-size: 11px; fill: #6b6a66; text-transform: uppercase; letter-spacing: 0.12em; }
+      .who-a { font-family: -apple-system, Inter, sans-serif; font-size: 11px; fill: #cc785c; text-transform: uppercase; letter-spacing: 0.12em; }
+      .msg   { font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; font-size: 12.5px; fill: #1f1e1d; }
+      .msg-m { font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; font-size: 12.5px; fill: #6b6a66; }
+      .msg-a { font-family: "JetBrains Mono", "SF Mono", Menlo, monospace; font-size: 12.5px; fill: #cc785c; }
+      .tag   { font-family: -apple-system, Inter, sans-serif; font-size: 12px; fill: #cc785c; letter-spacing: 0.02em; }
+      .hdr   { font-family: -apple-system, Inter, sans-serif; font-size: 12.5px; fill: #6b6a66; }
+      .hdr-a { font-family: -apple-system, Inter, sans-serif; font-size: 12.5px; font-weight: 500; fill: #cc785c; }
+      .cap   { font-family: -apple-system, Inter, sans-serif; font-size: 14px; fill: #6b6a66; }
+    </style>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cc785c"/>
+    </marker>
+  </defs>
+
+  <!-- column captions -->
+  <text x="130" y="26" text-anchor="middle" class="hdr">writes the script</text>
+  <text x="442" y="26" text-anchor="middle" class="hdr-a">fresh — verifies it</text>
+
+  <!-- ===================== SESSION 1 ===================== -->
+  <rect x="12" y="42" width="236" height="388" rx="10" fill="#fbfaf6" stroke="#d8d4c8" stroke-width="1"/>
+  <circle cx="34" cy="64" r="3.2" fill="#d8d4c8"/>
+  <circle cx="46" cy="64" r="3.2" fill="#d8d4c8"/>
+  <circle cx="58" cy="64" r="3.2" fill="#d8d4c8"/>
+  <text x="78" y="68" class="win">claude · session 1</text>
+  <line x1="12" y1="80" x2="248" y2="80" stroke="#e6e2d6" stroke-width="1"/>
+
+  <!-- user turn -->
+  <text x="32" y="102" class="who">you</text>
+  <rect x="32" y="110" width="204" height="104" rx="7" fill="#f5e7df" stroke="#cc785c" stroke-width="0.8"/>
+  <text x="44" y="130" class="msg">write a inflation.py</text>
+  <text x="44" y="148" class="msg">script: take CPI from</text>
+  <text x="44" y="166" class="msg">cpi.csv, compute</text>
+  <text x="44" y="184" class="msg">year-on-year inflation,</text>
+  <text x="44" y="202" class="msg">write to inflation.csv</text>
+
+  <!-- agent turn: writes the script + output -->
+  <text x="32" y="240" class="who-a">claude</text>
+  <rect x="32" y="248" width="204" height="130" rx="7" fill="#f1efe7" stroke="#c9c5b8" stroke-width="0.8"/>
+  <text x="44" y="272" class="msg-m">wrote inflation.py</text>
+  <text x="44" y="298" class="msg-m">year    yoy</text>
+  <line x1="44" y1="306" x2="150" y2="306" stroke="#d8d4c8" stroke-width="0.8"/>
+  <text x="44" y="324" class="msg">2023    5.4</text>
+  <text x="44" y="344" class="msg">2024    7.9</text>
+  <text x="44" y="370" class="msg-a">→ inflation.csv</text>
+
+  <!-- ===================== SESSION 2 ===================== -->
+  <rect x="324" y="42" width="236" height="388" rx="10" fill="#fbfaf6" stroke="#cc785c" stroke-width="1.2"/>
+  <circle cx="346" cy="64" r="3.2" fill="#e7c3b4"/>
+  <circle cx="358" cy="64" r="3.2" fill="#e7c3b4"/>
+  <circle cx="370" cy="64" r="3.2" fill="#e7c3b4"/>
+  <text x="390" y="68" class="win">claude · session 2</text>
+  <line x1="324" y1="80" x2="560" y2="80" stroke="#e6e2d6" stroke-width="1"/>
+
+  <!-- user turn -->
+  <text x="344" y="102" class="who">you</text>
+  <rect x="344" y="110" width="204" height="130" rx="7" fill="#f5e7df" stroke="#cc785c" stroke-width="0.8"/>
+  <text x="356" y="130" class="msg">inflation.py turns CPI</text>
+  <text x="356" y="148" class="msg">into year-on-year</text>
+  <text x="356" y="166" class="msg">inflation. verify it's</text>
+  <text x="356" y="184" class="msg">correct. don't edit —</text>
+  <text x="356" y="202" class="msg">read it, run it to</text>
+  <text x="356" y="220" class="msg">inspect the output.</text>
+
+  <!-- agent turn: independent verification -->
+  <text x="344" y="264" class="who-a">claude</text>
+  <rect x="344" y="272" width="204" height="106" rx="7" fill="#f1efe7" stroke="#c9c5b8" stroke-width="0.8"/>
+  <text x="356" y="296" class="msg">ran it; recomputed YoY:</text>
+  <text x="356" y="316" class="msg">2024 = 8.3, not 7.9</text>
+  <text x="356" y="344" class="msg">bug: shift(11) at</text>
+  <text x="356" y="364" class="msg-a">inflation.py:14</text>
+
+  <!-- ===================== HAND-OFF ARROW ===================== -->
+  <path d="M 240 300 C 286 300, 286 165, 340 165" fill="none" stroke="#cc785c" stroke-width="2" marker-end="url(#arr)"/>
+  <text x="276" y="246" text-anchor="end" class="tag">inflation.py</text>
+  <text x="276" y="262" text-anchor="end" class="tag">+ cpi.csv</text>
+
+  <!-- caption -->
+  <text x="286" y="458" text-anchor="middle" class="cap">independent context · no prior interpretation to defend</text>
+</svg>

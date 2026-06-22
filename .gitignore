@@ -12,6 +12,8 @@ slides/decks/*
 !slides/decks/session2.pdf
 !slides/decks/session3.md
 !slides/decks/session3.pdf
+!slides/decks/session4.md
+!slides/decks/session4.pdf
 slides/assets/*
 !slides/assets/.gitkeep
 !slides/assets/*.svg
@@ -43,6 +45,9 @@ replication/
 # Folder structure and notes (README/summary) are tracked; PDFs are not.
 # Distribute the PDFs to students through a private channel, not git.
 papers/**/*.pdf
+
+# Lit-review demo run-notes — instructor copy; the run prompts live in the slides.
+papers/litreview/README.md
 
 # Participant roster (PII)
 Participants_AI Course.pdf
