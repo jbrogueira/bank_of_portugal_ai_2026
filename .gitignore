@@ -33,6 +33,7 @@ env/
 # Claude Code local state (keep shared settings.json tracked)
 .claude/*
 !.claude/settings.json
+!.claude/skills/
 
 # Local copy of CLAUDE.md for other agent CLIs
 AGENTS.md
