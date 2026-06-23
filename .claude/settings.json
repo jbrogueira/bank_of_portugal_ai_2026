@@ -12,5 +12,18 @@
       "Write(./data/processed/**)",
       "Write(./code/**)"
     ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Read",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/log_raw_read.py\""
+          }
+        ]
+      }
+    ]
   }
 }
